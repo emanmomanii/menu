@@ -1,0 +1,19 @@
+table 
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+  height: 50px;
+}
+
+.menu table,td {
+  width: 30% ;
+  border: 1px black solid ;
+  padding: 5px ;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  
+}
+
+  

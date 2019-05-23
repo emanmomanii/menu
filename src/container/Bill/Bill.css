@@ -1,0 +1,23 @@
+table 
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+  height: 70px;
+  margin: 10px;
+}
+
+.Bill td {
+  width: 40% ;
+  border: 1px black solid ;
+  padding: 10px ;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  
+}
+p{  font-weight: bold;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 10px ;
+    text-align: left;
+}
