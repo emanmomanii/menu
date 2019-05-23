@@ -2,24 +2,24 @@ import React, { Component } from 'react';
 import './menu.css';
 import Bill from '../Bill/Bill';
 import axios from 'axios';
-import { Route, Link,Redirect} from 'react-router-dom';
-//import { withRouter } from "react-router-dom";
 
 class Menu extends Component {
 
   state = {
     menu: [],
     bill: [],
-    select: false,
- 
+    select: false
+
   }
   componentDidMount() {
     axios.get('http://94.127.209.194:3333/AudioGramServices/webapi/myresource/menu')
-      .then(response => {
+      .then((response) => {
         const menus = response.data
         this.setState({ menu: menus })
       }
       );
+
+
 
   }
 
@@ -36,35 +36,50 @@ class Menu extends Component {
     });
   }
 
+
+
   render() {
-   
-    let menu = this.state.menu.map(list => {
-      
-      return (<div>
-        <table className='menu'>
-          <tbody>
-            <tr>
-              <td>{list.itemDesc}</td>
-              <td>{list.itemPrice}</td>
-              <td><input type='checkbox' onClick={() => this.pop(list.itemId)}></input></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>)
+
+    let menu = this.state.menu.map((list, id) => {
+      return (
+        <div className='cont' key={id}>
+          <div className='menus'>
+            <img src='https://lh3.googleusercontent.com/9diBZQvzrlEpRRz53jOPwOiagWopXlHcPAIc5h48rXvjA47h2b6wHkvRoO53LfRYj26wHw=s85'
+              width='180px' onClick={() => this.pop(list.itemId)} alt='Show-Item'/>
+            <div className='desc'>{list.itemDesc}</div>
+            <hr size='2' length='100px' />
+            <div>{list.itemPrice + 'JD'}</div>
+          </div>
+        </div>
+
+
+      )
     })
     return (
-
       <div>
-        <h1>Menu</h1>
-        {menu}
+        <div className='header-container'>
+          <div className='flavor'>
+            <div>OUR</div>
+            <div className='flav'>FLAVORS</div>
+          </div>
+        </div>
+        <div className='large'>
+          <div className='small'>
+            {menu}
+          </div>
+        </div>
         {this.state.select ?
-        <Bill bills={this.state.bill} key={this.state.bill.itemId}/>
-        :null}
+          <Bill bills={this.state.bill} />
+          : null}
       </div>
-
     )
-
   }
+
+
+
+
+
 }
+
 
 export default Menu;

@@ -1,15 +1,60 @@
-.Mycomp ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
-.Mycomp li 
-{display: inline-block;
-    margin: 20px;
+.mycomp {
+    position: fixed;
+    width: 100%; 
+    color: #fff;
+    background-color: #000;  
+    padding: 10px 0 40px 0;
+    display: flex;
+    justify-content: center; 
+    height: 10px;
+  
+  }
+ 
+.navbar {
+    
+    width: 500px;
+    display:flex;
+    justify-content: space-around;
+   
+    
 }
 
-li .active{
-color:red;
+.links {
+      
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    
 }
+
+.links li
+{
+ list-style: none;
+ 
+}
+.links a
+{
+    color:#fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 90%;
+    
+}
+.links a:hover,
+.links a.active
+{
+    color:#efda99;
+    
+}
+  
+.add {
+    margin-left: 40px;
+  }
+.header-container
+  { 
+    background: #b5e8d5;
+    height: 350px ;
+    display:flex;
+    justify-content: center;
+  } 
+ 

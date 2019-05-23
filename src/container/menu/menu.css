@@ -1,19 +1,63 @@
-table 
+
+.flavor
 {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 30%;
-  height: 50px;
+  color:#fff;
+  font-size:30px;
+  text-align: center;
+  font-weight:bolder;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  flex-direction: column;
+   
+}
+ 
+.flav
+{ 
+  color:#fff;
+  font-size: 50px;
+ 
 }
 
-.menu table,td {
-  width: 30% ;
-  border: 1px black solid ;
-  padding: 5px ;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+
+.large
+{
+  
+  display: flex;
+  justify-content: center;
+}
+.small
+{
+ 
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cont
+{
+  width:300px;
+  margin:50px auto; 
+  padding: 10px;
+  display: flex;
+  flex-wrap:wrap;
+}
+.menus
+{
+  width: 200px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 25px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.items
+{
+  border: 1px solid #0f0;
+  width: 300px;
   
 }
 
-  

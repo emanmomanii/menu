@@ -1,23 +1,60 @@
-table 
-{
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
-  height: 70px;
-  margin: 10px;
+.header
+
+{ background: #fbff8e;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 27%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-.Bill td {
-  width: 40% ;
-  border: 1px black solid ;
-  padding: 10px ;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+.head
+{
   
+  width:700px;
+  background: #fbff8e;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
 }
-p{  font-weight: bold;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    padding: 10px ;
-    text-align: left;
+.bills,.th,.body1
+{ background: #fff;
+  display:flex;
+  justify-content: space-around;
+  width:250px;
+  margin:3px;
+  margin-left: -40px;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.th,.total{
+  font-weight: bold;
+}
+.button-style
+{
+  border: 1px solid #fbff8e;
+}
+.done
+{
+  background:#fff;
+  font-size: 25px;
+  border: 1px solid #000;
+  width: 150px;
+  height: 70px;
+  margin: 20px;
+  margin-left:50%; 
+}
+.done:hover
+{
+  background: #000;
+  color: #fff;
+ 
 }
