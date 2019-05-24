@@ -5,11 +5,13 @@ import axios from 'axios';
 class Add extends Component {
     state = { itemDesc: '', itemImage: '', itemPrice: '' }
 
-
+    changehandle = (event) => {
+        this.setState({[event.target.name]: event.target.value });
+        // console.log(this.state);
+    }
 
     addItem = (event) => {
         const data = this.state;
-        console.log(data)
         axios.post('http://94.127.209.194:3333/AudioGramServices/webapi/myresource/postmenu', data)
             .then(response => {
                 console.log('response', response)

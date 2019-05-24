@@ -10,14 +10,12 @@ class Login extends Component {
 
     handleChange = (event) => {
         const password = event.target.value;
-        console.log(password);
         if (password === this.state.password) {
             this.setState({ authorized: true })
         }
     }
 
     authorize = () => {
-        console.log('hi')
         if (this.state.authorized)
             return <Redirect path='/eman/Add' component={Add} />;
     }
@@ -25,15 +23,15 @@ class Login extends Component {
         let login = (
             <div className='login'>
                 <div className='container'>
-                <h1>Enter The Password</h1>
-                <form onSubmit={this.authorize}>
-                    <div className='input'> 
-                    <input
-                        type="password"
-                        onChange={event => this.handleChange(event)} placeholder='Password:123' className='in'/>
-                    </div>  
-                    <Link to='/eman/Add'><button type="submit"  className='submit'>Submit</button></Link>
-                </form>
+                    <h1>Enter The Password</h1>
+                    <form onSubmit={this.authorize}>
+                        <div className='input'>
+                            <input
+                                type="password"
+                                onChange={event => this.handleChange(event)} placeholder='Password:123' className='in' />
+                        </div>
+                        <Link to='/eman/Add'><button type="submit" className='submit'>Submit</button></Link>
+                    </form>
                 </div>
             </div>
         );
