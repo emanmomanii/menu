@@ -23,7 +23,8 @@
 }
 .login h1
 {
-margin-top: 10%;
+margin-top: 8%;
+
 
 }
 .input
@@ -31,7 +32,7 @@ margin-top: 10%;
     width:200px;
     padding: 20px;
     text-align: center;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 .submit
 {   width:100px;
