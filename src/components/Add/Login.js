@@ -17,7 +17,7 @@ class Login extends Component {
 
     authorize = () => {
         if (this.state.authorized)
-            return <Redirect path='/eman/Add' component={Add} />;
+            return <Redirect path='/Log/Add' component={Add} />;
     }
     render() {
         let login = (
@@ -30,7 +30,7 @@ class Login extends Component {
                                 type="password"
                                 onChange={event => this.handleChange(event)} placeholder='Password:123' className='in' />
                         </div>
-                        <Link to='/eman/Add'><button type="submit" className='submit'>Submit</button></Link>
+                        <Link to='/Log/Add'><button type="submit" className='submit'>Submit</button></Link>
                     </form>
                 </div>
             </div>

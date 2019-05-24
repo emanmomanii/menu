@@ -24,7 +24,7 @@ class Mycomp extends Component {
           
           <Route path='/' exact component={Menu} />
           <Route path='/Log' exact component={Login} />
-          <Route path='/eman/Add' exact component={Add} />
+          <Route path='/Log/Add' exact component={Add} />
         
       </div>
 
