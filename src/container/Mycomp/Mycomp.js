@@ -3,6 +3,7 @@ import Menu from '../menu/menu';
 import './Mycomp.css'
 import { Route, NavLink} from 'react-router-dom';
 import Login from '../../components/Add/Login'
+import Add from '../../components/Add/Add'
 class Mycomp extends Component {
   render() {
     return (
@@ -20,10 +21,10 @@ class Mycomp extends Component {
             </ul>
           </div>
     </div>
-
-      
+          
           <Route path='/' exact component={Menu} />
           <Route path='/Log' exact component={Login} />
+          <Route path='/eman/Add' exact component={Add} />
         
       </div>
 

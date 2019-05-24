@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Add from './Add.js'
 import './Login.css'
 class Login extends Component {
@@ -17,8 +17,9 @@ class Login extends Component {
     }
 
     authorize = () => {
+        console.log('hi')
         if (this.state.authorized)
-            return <Route path='/Add' component={Add} />;
+            return <Redirect path='/eman/Add' component={Add} />;
     }
     render() {
         let login = (
@@ -31,7 +32,7 @@ class Login extends Component {
                         type="password"
                         onChange={event => this.handleChange(event)} placeholder='Password:123' className='in'/>
                     </div>  
-                    <Link to='/Add'><input type="submit" value='Submit' className='submit'/></Link>
+                    <Link to='/eman/Add'><button type="submit"  className='submit'>Submit</button></Link>
                 </form>
                 </div>
             </div>
