@@ -3,7 +3,6 @@ import Menu from '../menu/menu';
 import './Mycomp.css'
 import { Route, NavLink} from 'react-router-dom';
 import Login from '../../components/Add/Login'
-import Notfound from '../../components/Notfound'
 class Mycomp extends Component {
   render() {
     return (
