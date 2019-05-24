@@ -1,12 +1,3 @@
-.inputs:valid
-{
-    border: 2px solid black;
-}
-.inputs:invalid
-{
-    border: 2px solid red;
-}
-
 .background
 {   
     

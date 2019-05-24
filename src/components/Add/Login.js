@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Add from './Add.js'
+import './Login.css'
 class Login extends Component {
     state = {
         password: '123',
@@ -21,14 +22,18 @@ class Login extends Component {
     }
     render() {
         let login = (
-            <div>
+            <div className='login'>
+                <div className='container'>
                 <h1>Enter The Password</h1>
                 <form onSubmit={this.authorize}>
+                    <div className='input'> 
                     <input
                         type="password"
-                        onChange={event => this.handleChange(event)} placeholder='The Password Is 123' />
-                    <Link to='/Add'><input type="submit" value='Submit' /></Link>
+                        onChange={event => this.handleChange(event)} placeholder='Password:123' className='in'/>
+                    </div>  
+                    <Link to='/Add'><input type="submit" value='Submit' className='submit'/></Link>
                 </form>
+                </div>
             </div>
         );
         return (

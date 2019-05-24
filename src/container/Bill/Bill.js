@@ -5,7 +5,7 @@ import axios from 'axios';
 class Bill extends Component {
     itemsSelected = () => {
         this.props.bills.map(bi => {
-           const data = {
+            const data = {
                 orderUserName: 'Eman',
                 orderItemId: bi[0].itemId,
                 orderPrice: bi[0].itemPrice

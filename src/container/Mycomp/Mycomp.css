@@ -9,24 +9,18 @@
     height: 10px;
   
   }
- 
-.navbar {
+ .navbar {
     
     width: 500px;
     display:flex;
     justify-content: space-around;
-   
-    
 }
-
 .links {
       
     display: flex;
     justify-content:flex-end;
     flex-wrap: wrap;
-    
 }
-
 .links li
 {
  list-style: none;
