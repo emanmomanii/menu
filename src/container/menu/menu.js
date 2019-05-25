@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './menu.css';
+import { Redirect, Link } from 'react-router-dom';
 import Bill from '../Bill/Bill';
 import axios from 'axios';
 
@@ -18,9 +19,13 @@ class Menu extends Component {
         this.setState({ menu: menus })
       }
       );
-
-
-
+  }
+  showBill = () => {
+    console.log('hi')
+    return <Redirect to={{
+      pathname: '/Bill',
+      state: { bills: this.state.bill }
+    }} />
   }
 
   pop = (id) => {
@@ -44,8 +49,11 @@ class Menu extends Component {
       return (
         <div className='cont' key={id}>
           <div className='menus'>
-            <img src='https://lh3.googleusercontent.com/6FxxnB4yPEhBibeTF2KJaz_ptruK32yZsORbO0n_k2Z5R3vrvyolE4ta9eQnm6sINhYHBNE=s85'
-              width='180px' onClick={() => this.pop(list.itemId)} alt='Show-Item'/>
+            {list.itemImage == 'null' ?
+              <img src='https://lh3.googleusercontent.com/Vi3S6XmWdqwesmuIqbpDWgTi9KRZOWDPbMJVpV6YMKXPCk1Frhrz_iSzLHDcycDzEE1A=s85'
+                onClick={() => this.pop(list.itemId)} alt='Show-Item' />
+              : <img src={list.itemImage}
+                onClick={() => this.pop(list.itemId)} alt='Show-Item' />}
             <div className='desc'>{list.itemDesc}</div>
             <hr size='2' length='100px' />
             <div>{list.itemPrice + 'JD'}</div>
@@ -70,16 +78,11 @@ class Menu extends Component {
         </div>
         {this.state.select ?
           <Bill bills={this.state.bill} />
+          /*<Link path='/Bill'><button onClick={this.showBill}>SHOW BILL</button></Link>
+            : null}*/
           : null}
       </div>
     )
   }
-
-
-
-
-
 }
-
-
 export default Menu;

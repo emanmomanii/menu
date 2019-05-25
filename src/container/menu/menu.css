@@ -42,6 +42,11 @@
   display: flex;
   flex-wrap:wrap;
 }
+.cont img{
+  width:180px;
+  height:150px; 
+  border-radius:5px;
+}
 .menus
 {
   width: 200px;

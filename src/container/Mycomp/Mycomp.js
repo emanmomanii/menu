@@ -4,6 +4,7 @@ import './Mycomp.css'
 import { Route, NavLink} from 'react-router-dom';
 import Login from '../../components/Add/Login'
 import Add from '../../components/Add/Add'
+import Bill from '../Bill/Bill'
 class Mycomp extends Component {
   render() {
     return (
@@ -23,6 +24,7 @@ class Mycomp extends Component {
     </div>
           
           <Route path='/' exact component={Menu} />
+          <Route path='/Bill' exact component={Bill} />
           <Route path='/Log' exact component={Login} />
           <Route path='/Log/Add' exact component={Add} />
         
