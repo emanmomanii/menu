@@ -50,13 +50,13 @@ class Menu extends Component {
         <div className='cont' key={id}>
           <div className='menus'>
             {list.itemImage == 'null' ?
-              <img src='https://lh3.googleusercontent.com/Vi3S6XmWdqwesmuIqbpDWgTi9KRZOWDPbMJVpV6YMKXPCk1Frhrz_iSzLHDcycDzEE1A=s85'
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVCiK6WNLaDL4Mm37EBbooEgV-phwF4TDfLZN0qpK9m447CYO3'
                 onClick={() => this.pop(list.itemId)} alt='Show-Item' />
               : <img src={list.itemImage}
                 onClick={() => this.pop(list.itemId)} alt='Show-Item' />}
             <div className='desc'>{list.itemDesc}</div>
             <hr size='2' length='100px' />
-            <div>{list.itemPrice + 'JD'}</div>
+            <div className='price'>{list.itemPrice + 'JD'}</div>
           </div>
         </div>
 

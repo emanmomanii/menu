@@ -43,7 +43,7 @@
   flex-wrap:wrap;
 }
 .cont img{
-  width:180px;
+  width:190px;
   height:150px; 
   border-radius:5px;
 }
@@ -66,3 +66,13 @@
   
 }
 
+.desc
+{
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.price
+{
+  font-size: 18px;
+}
